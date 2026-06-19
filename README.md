@@ -49,12 +49,12 @@
 <br />
 
 <p align="center">
-  <a href="#features">Features</a> •
-  <a href="#tech-stack">Tech Stack</a> •
-  <a href="#quick-start">Quick Start</a> •
-  <a href="#api-endpoints">API</a> •
-  <a href="#deployment">Deploy</a> •
-  <a href="#contributing">Contribute</a>
+  <a href="features">Features</a> •
+  <a href="tech-stack">Tech Stack</a> •
+  <a href="quick-start">Quick Start</a> •
+  <a href="api-endpoints">API</a> •
+  <a href="deployment">Deploy</a> •
+  <a href="contributing">Contribute</a>
 </p>
 
 <br />
@@ -131,18 +131,6 @@
 
 ## ✦ Screenshots
 
-```
-agent-coder-pro/
-└── screenshots/
-  ├── home.png
-  ├── code-generator.png
-  ├── login.png
-  ├── profile.png
-  ├── signup.svg
-  ├── home-part1.svg
-  └── home-part2.svg
-```
-
 <table>
   <tr>
     <td align="center"><strong>🏠 Home Page</strong></td>
@@ -152,7 +140,7 @@ agent-coder-pro/
   <tr>
     <td><img src="./screenshots/home.png" alt="Home Page" width="360" /></td>
     <td><img src="./screenshots/code-generator.png" alt="Code Generator" width="360" /></td>
-    <td><img src="./screenshots/saved-code.png" alt="Saved Code" width="360" /></td>
+    <td><img src="./screenshots/saved-code-detail.png" alt="Saved Code" width="360" /></td>
   </tr>
   <tr>
     <td align="center"><strong>🏠 Home — Hero</strong></td>
