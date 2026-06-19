@@ -49,12 +49,12 @@
 <br />
 
 <p align="center">
-  <a href="features">Features</a> •
-  <a href="tech-stack">Tech Stack</a> •
-  <a href="quick-start">Quick Start</a> •
-  <a href="api-endpoints">API</a> •
-  <a href="deployment">Deploy</a> •
-  <a href="contributing">Contribute</a>
+  <a href="#-features">Features</a> •
+  <a href="#-tech-stack">Tech Stack</a> •
+  <a href="#-quick-start">Quick Start</a> •
+  <a href="#ai--apis">API</a> •
+  <a href="#-deployment">Deploy</a> •
+  <a href="#-contributing">Contribute</a>
 </p>
 
 <br />
@@ -405,10 +405,9 @@ Distributed under the **MIT License**. See [LICENSE](./LICENSE) for details.
 
 ## ✦ Author
 
-**Agent Coder Pro Team**
+**Agent Coder Pro**
 
 - GitHub: [@harysri](https://github.com/harysri)
-- Email: support@agentcoder.com
 - Project: [https://github.com/harysri/agent-coder-pro](https://github.com/harysri/agent-coder-pro)
 
 ---
