@@ -73,7 +73,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="https://github.com/AgentcoderPro/Agentcoder-Pro#readme"
+                    href="https://github.com/harysri//agent-coder-pro/blob/main/README.md"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 text-sm hover:text-purple-400 hover:translate-x-1 transition-all block"
@@ -83,7 +83,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/AgentcoderPro/Agentcoder-Pro/issues"
+                    href="https://github.com/harysri/agent-coder-pro/issues"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 text-sm hover:text-purple-400 hover:translate-x-1 transition-all block"
@@ -93,7 +93,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/AgentcoderPro/Agentcoder-Pro/discussions"
+                    href="https://github.com/harysri/agent-coder-pro/discussions"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 text-sm hover:text-purple-400 hover:translate-x-1 transition-all block"
@@ -108,7 +108,7 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex items-center gap-1">
             <a
-              href="https://github.com"
+              href="https://github.com/harysri/agent-coder-pro"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-white/5 hover:bg-white/10 rounded-lg transition-colors group"
@@ -122,9 +122,8 @@ const Footer = () => {
         {/* BOTTOM SECTION */}
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm flex items-center justify-center gap-1">
-            © {new Date().getFullYear()} Agent Coder Pro · Built with
+            © {new Date().getFullYear()} Agent Coder Pro · Built
             <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500 mx-1" />
-            by Developers
           </p>
         </div>
       </div>
