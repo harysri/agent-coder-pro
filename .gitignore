@@ -1,0 +1,81 @@
+# Agent Coder Pro — Root .gitignore
+# Covers both client/ (React + Vite) and server/ (Express + Mongoose)
+
+
+# -------------------------------
+# Dependencies
+# -------------------------------
+node_modules/
+
+
+# -------------------------------
+# Environment & Secrets
+# -------------------------------
+.env
+.env.local
+.env.*.local
+
+# Keep example files for reference
+!*.example
+!.env.example
+
+# SSL / certificates
+*.pem
+*.key
+*.cert
+
+
+# -------------------------------
+# Build Artifacts
+# -------------------------------
+dist/
+build/
+out/
+client/dist/
+client/dist-ssr/
+
+
+# -------------------------------
+# Runtime & Temp Files
+# -------------------------------
+# Code execution temp files (Python, JS, C++, C source + compiled binaries)
+server/tmp/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# -------------------------------
+# Cache
+# -------------------------------
+.turbo/
+.cache/
+.eslintcache
+client/node_modules/.vite/
+
+
+# -------------------------------
+# IDE & Editor
+# -------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+
+# -------------------------------
+# OS Files
+# -------------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.local
