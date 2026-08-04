@@ -53,7 +53,6 @@
   <a href="#-tech-stack">Tech Stack</a> •
   <a href="#-quick-start">Quick Start</a> •
   <a href="#ai--apis">API</a> •
-  <a href="#-deployment">Deploy</a> •
   <a href="#-contributing">Contribute</a>
 </p>
 
@@ -359,16 +358,6 @@ DELETE /api/viewcode/:codeId         # Delete [JWT]
 6️⃣  Click Run Code                          → Live execution output
 7️⃣  Click Save                              → Persist to your profile
 ```
-
----
-
-## ✦ Deployment
-
-| Platform                      | Target   | Notes                          |
-| ----------------------------- | -------- | ------------------------------ |
-| **Vercel / Netlify**          | Frontend | Deploy `client/dist/`          |
-| **Railway / Render / Fly.io** | Backend  | Deploy `server/` with env vars |
-| **MongoDB Atlas**             | Database | Cloud-hosted MongoDB           |
 
 ---
 
