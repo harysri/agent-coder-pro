@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="./assets/agent-coder-pro-banner.svg" alt="Agent Coder Pro" width="700" />
+</div>
+
 <p align="center">
   <img src="https://img.shields.io/badge/version-1.0-purple?style=for-the-badge&logo=github" alt="Version" />
   <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react" alt="React" />
@@ -6,37 +10,6 @@
   <img src="https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?style=for-the-badge&logo=tailwindcss" alt="Tailwind" />
   <img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge" alt="License" />
 </p>
-
-<br />
-
-<div align="center">
-  <pre style="font-size: 28px; font-weight: bold; color: #a855f7; background: #000; padding: 20px; border-radius: 16px; border: 1px solid #333;">
-    █████╗  ██████╗ ███████╗███╗   ██╗████████╗
-    ██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝
-    ███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║
-    ██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║
-    ██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║
-    ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝
-  </pre>
-  
-  <pre style="font-size: 18px; color: #38bdf8; background: #000; padding: 10px; border-radius: 8px; border: 1px solid #2563eb;">
-    ██████╗ ██████╗ ██████╗ ███████╗██████╗
-    ██╔════╝██╔═══██╗██╔══██╗██╔════╝██╔══██╗
-    ██║     ██║   ██║██████╔╝█████╗  ██████╔╝
-    ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
-    ╚██████╗╚██████╔╝██║  ██║███████╗██║  ██║
-     ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
-  </pre>
-
-  <pre style="font-size: 28px; font-weight: bold; background: linear-gradient(90deg, #a855f7, #3b82f6); -webkit-background-clip: text; color: transparent; padding: 10px;">
-██████╗ ██████╗  ██████╗
-██╔══██╗██╔══██╗██╔═══██╗
-██████╔╝██████╔╝██║   ██║
-██╔═══╝ ██╔══██╗██║   ██║
-██║     ██║  ██║╚██████╔╝
-╚═╝     ╚═╝  ╚═╝ ╚═════╝
-  </pre>
-</div>
 
 <br />
 
@@ -77,9 +50,9 @@
 |     | Feature              | What It Does                                                         |
 | --- | -------------------- | -------------------------------------------------------------------- |
 | 💬  | **Text to Code**     | Describe what you want in plain English — get working code instantly |
-| 🔧  | **Auto-Fix & Debug** | Paste broken code; AI identifies errors, fixes syntax, and optimizes |
+| 🔧  | **Fix & Debug**      | AI identifies errors, fixes syntax, and optimizes                    |
 | ▶️  | **Live Execution**   | Run Python, JS, C++, and C directly in a secure browser sandbox      |
-| 📖  | **Code Explanation** | Get step-by-step natural language breakdowns of any code             |
+| 📖  | **Code Explanation** | Get step-by-step natural language breakdowns of genarated code       |
 | ⚡  | **Streaming Output** | Watch AI responses appear character-by-character in real time        |
 | 💾  | **Save & Manage**    | Persist generated code to your profile for later access              |
 | 🔐  | **Auth System**      | JWT-based login/signup with OTP password recovery via email          |
@@ -130,38 +103,24 @@
 
 ## ✦ Screenshots
 
-<table>
-  <tr>
-    <td align="center"><strong>🏠 Home Page</strong></td>
-    <td align="center"><strong>⚡ Code Generator</strong></td>
-    <td align="center"><strong>💾 Saved Code</strong></td>
-  </tr>
-  <tr>
-    <td><img src="./screenshots/home.png" alt="Home Page" width="360" /></td>
-    <td><img src="./screenshots/code-generator.png" alt="Code Generator" width="360" /></td>
-    <td><img src="./screenshots/saved-code-detail.png" alt="Saved Code" width="360" /></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>🏠 Home — Hero</strong></td>
-    <td align="center"><strong>🏠 Home — Features</strong></td>
-    <td align="center"><strong>🔐 Signup</strong></td>
-  </tr>
-  <tr>
-    <td><img src="./screenshots/home-part1.png" alt="Home Hero" width="360" /></td>
-    <td><img src="./screenshots/home-part2.png" alt="Home Features" width="360" /></td>
-    <td><img src="./screenshots/signup.png" alt="Signup" width="360" /></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>🔐 Login</strong></td>
-    <td align="center"><strong>👤 Profile</strong></td>
-    <td align="center"><strong>📂 Saved Code Detail</strong></td>
-  </tr>
-  <tr>
-    <td><img src="./screenshots/login.png" alt="Login" width="360" /></td>
-    <td><img src="./screenshots/profile.png" alt="Profile" width="360" /></td>
-    <td><img src="./screenshots/saved-code-detail.png" alt="Saved Code Detail" width="360" /></td>
-  </tr>
-</table>
+- **🏠 Home Page**
+  <img src="./screenshots/home.png" alt="Home Page" width="360" />
+- **⚡ Code Generator**
+  <img src="./screenshots/code-generator.png" alt="Code Generator" width="360" />
+- **💾 Saved Code**
+  <img src="./screenshots/saved-code-detail.png" alt="Saved Code" width="360" />
+- **🏠 Home — Hero**
+  <img src="./screenshots/home-part1.png" alt="Home Hero" width="360" />
+- **🏠 Home — Features**
+  <img src="./screenshots/home-part2.png" alt="Home Features" width="360" />
+- **🔐 Signup**
+  <img src="./screenshots/signup.png" alt="Signup" width="360" />
+- **🔐 Login**
+  <img src="./screenshots/login.png" alt="Login" width="360" />
+- **👤 Profile**
+  <img src="./screenshots/profile.png" alt="Profile" width="360" />
+- **📂 Saved Code Detail**
+  <img src="./screenshots/saved-code-detail.png" alt="Saved Code Detail" width="360" />
 
 ---
 
