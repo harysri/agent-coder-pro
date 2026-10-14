@@ -104,35 +104,35 @@
 ## ✦ Screenshots
 
 <div align="center">
-  <p>
+  <p align="left">
     <strong>Home Page</strong><br />
     <img src="./screenshots/home.png" alt="Home Page" width="640" />
   </p>
-  <p>
+  <p align="left">
     <strong>Code Generator</strong><br />
     <img src="./screenshots/code-generator.png" alt="Code Generator" width="640" />
   </p>
-  <p>
+  <p align="left">
     <strong>Saved Code Detail</strong><br />
     <img src="./screenshots/saved-code-detail.png" alt="Saved Code Detail" width="640" />
   </p>
-  <p>
+  <p align="left">
     <strong>Home — Hero</strong><br />
     <img src="./screenshots/home-part1.png" alt="Home Hero" width="640" />
   </p>
-  <p>
+  <p align="left">
     <strong>Home — Features</strong><br />
     <img src="./screenshots/home-part2.png" alt="Home Features" width="640" />
   </p>
-  <p>
+  <p align="left">
     <strong>Signup</strong><br />
     <img src="./screenshots/signup.png" alt="Signup" width="640" />
   </p>
-  <p>
+  <p align="left">
     <strong>Login</strong><br />
     <img src="./screenshots/login.png" alt="Login" width="640" />
   </p>
-  <p>
+  <p align="left">
     <strong>Profile</strong><br />
     <img src="./screenshots/profile.png" alt="Profile" width="640" />
   </p>
