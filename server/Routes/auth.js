@@ -46,7 +46,7 @@ router.post("/login", async (req, res) => {
         createdAt: user.createdAt,
       },
       process.env.JWT_SECRET,
-      { expiresIn: "1h" },
+      { expiresIn: "1h" }
     );
 
     res.json({
@@ -685,7 +685,7 @@ router.post("/signup", async (req, res) => {
         createdAt: newUser.createdAt,
       },
       process.env.JWT_SECRET,
-      { expiresIn: "1h" },
+      { expiresIn: "1h" }
     );
 
     res.status(201).json({
@@ -741,7 +741,7 @@ router.put("/profile", authenticateUser, async (req, res) => {
       {
         new: true,
         runValidators: true,
-      },
+      }
     ).select("-password");
 
     res.json({

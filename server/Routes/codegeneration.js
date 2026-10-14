@@ -5,6 +5,10 @@ const fetch = require("node-fetch");
 const { GoogleGenAI } = require("@google/genai");
 dotenv.config();
 
+/* ============================================================
+   OLD CODE GENERATION IMPLEMENTATION —
+   Model: moonshotai/Kimi-K2-Thinking:novita 
+   ============================================================
 router.post("/codegeneration", async (req, res) => {
   try {
     const { message, model = "moonshotai/Kimi-K2-Thinking:novita" } = req.body;
@@ -95,6 +99,75 @@ async function query(data) {
     throw error;
   }
 }
+============================================================ */
+
+/* ============================================================
+   CURRENT CODE GENERATION — Google Gemini 3.5 Flash Lite
+   ============================================================ */
+const CODE_MODEL = "gemini-3.5-flash-lite";
+
+// Dedicated client for code generation (/explain and /debug keep their own).
+const codeGenAI = new GoogleGenAI({
+  apiKey: process.env.GEMINI_API_KEY,
+  httpOptions: { timeout: 60000 },
+});
+
+router.post("/codegeneration", async (req, res) => {
+  try {
+    const { message } = req.body;
+
+    if (!message || typeof message !== "string" || !message.trim()) {
+      return res.status(400).json({
+        error: "Message is required and must be a non-empty string",
+      });
+    }
+
+    if (!process.env.GEMINI_API_KEY) {
+      return res.status(500).json({
+        error: "API configuration error",
+      });
+    }
+
+    const result = await codeGenAI.models.generateContent({
+      model: CODE_MODEL,
+      contents: [
+        {
+          role: "user",
+          parts: [{ text: message }],
+        },
+      ],
+      config: {
+        systemInstruction:
+          "You are an expert programming assistant. Provide clean, correct,exicutable and well-structured code. Do not want any kind of explanations",
+        maxOutputTokens: 2000,
+        temperature: 0.7,
+        topP: 0.9,
+      },
+    });
+
+    let responseText = "No response generated.";
+
+    if (result?.candidates?.[0]?.content?.parts?.length) {
+      responseText = result.candidates[0].content.parts
+        .map((p) => p.text || "")
+        .join("");
+    }
+
+    res.json({
+      response: responseText,
+      usage: result.usageMetadata || null,
+      model: CODE_MODEL,
+    });
+  } catch (error) {
+    console.error("Code generation error:", error);
+
+    res.status(500).json({
+      error: "Code generation failed",
+      details: error.message,
+      timestamp: new Date().toISOString(),
+    });
+  }
+});
 
 module.exports = router;
 
@@ -113,7 +186,7 @@ router.post("/explain", async (req, res) => {
     }
 
     const result = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemini-3.1-flash-lite",
       contents: [
         {
           role: "user",
@@ -167,7 +240,7 @@ router.post("/debug", async (req, res) => {
     }
 
     const result = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemini-3.1-flash-lite",
       contents: [
         {
           role: "user",

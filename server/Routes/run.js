@@ -11,7 +11,7 @@ const TMP_DIR = path.join(__dirname, "../tmp");
 if (!fs.existsSync(TMP_DIR)) fs.mkdirSync(TMP_DIR);
 
 router.post("/run", async (req, res) => {
-  let { language, code } = req.body;
+  let { language, code, input = "" } = req.body;
 
   if (!language || !code) {
     return res.status(400).json({ error: "Language and code are required" });
@@ -36,7 +36,8 @@ router.post("/run", async (req, res) => {
       filePath = path.join(TMP_DIR, `${id}.py`);
       fs.writeFileSync(filePath, code);
       command = process.platform === "win32" ? "python" : "python3";
-      args = [filePath];
+      // -u keeps stdout unbuffered so input() prompts appear before the program waits
+      args = ["-u", filePath];
     } else if (language === "javascript" || language === "js") {
       /* ---------------- JAVASCRIPT ---------------- */
       filePath = path.join(TMP_DIR, `${id}.js`);
@@ -75,7 +76,7 @@ router.post("/run", async (req, res) => {
       });
     }
 
-    const output = await execPromise(command, args);
+    const output = await execPromise(command, args, 5000, input);
     const time = Date.now() - start;
 
     res.json({
@@ -94,14 +95,30 @@ router.post("/run", async (req, res) => {
 });
 
 /* ---------- EXEC PROMISE ---------- */
-function execPromise(command, args, timeout = 5000) {
+// stdinData is written to the child's stdin and then closed (EOF) so that
+// programs reading input (input(), scanf, cin, readline) receive their input
+// instead of blocking until the timeout kills them.
+function execPromise(command, args, timeout = 5000, stdinData = "") {
   return new Promise((resolve, reject) => {
-    execFile(command, args, { timeout }, (error, stdout, stderr) => {
-      if (error) {
-        return reject(stderr || error.message);
+    const child = execFile(
+      command,
+      args,
+      { timeout },
+      (error, stdout, stderr) => {
+        if (error) {
+          return reject(stderr || error.message);
+        }
+        resolve(stdout || "⚠ Program ran but produced no output.");
+      },
+    );
+
+    if (child.stdin) {
+      if (stdinData) {
+        const payload = String(stdinData);
+        child.stdin.write(payload.endsWith("\n") ? payload : payload + "\n");
       }
-      resolve(stdout || "⚠ Program ran but produced no output.");
-    });
+      child.stdin.end(); // send EOF so programs reading input don't block
+    }
   });
 }
 

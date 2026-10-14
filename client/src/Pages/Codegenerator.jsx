@@ -669,6 +669,7 @@ import {
   Copy,
   Check,
   BookOpen,
+  Terminal,
 } from "lucide-react";
 import { Bookmark } from "lucide-react";
 import { formatResponse } from "../Utils/formatResponse";
@@ -756,6 +757,7 @@ const Codegenerator = () => {
   const [explanation, setExplanation] = useState("");
   const [debugOutput, setDebugOutput] = useState("");
   const [runOutput, setRunOutput] = useState("");
+  const [runInput, setRunInput] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
   const [isDebugging, setIsDebugging] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
@@ -810,7 +812,7 @@ const Codegenerator = () => {
           },
           body: JSON.stringify({
             message: prompt,
-            model: "moonshotai/Kimi-K2-Thinking:novita",
+            model: "gemini-3.5-flash-lite",
           }),
           signal: abortControllerRef.current.signal,
         },
@@ -1043,6 +1045,7 @@ ${generatedCode}`,
         body: JSON.stringify({
           language,
           code: cleanedCode,
+          input: runInput,
         }),
       });
 
@@ -1268,6 +1271,23 @@ Status: ${data.status}`,
                     </code>
                   </pre>
                 </div>
+              </div>
+
+              {/* Program Input (stdin) */}
+              <div className="relative bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-4 sm:p-6">
+                <label className="block text-sm font-medium text-gray-300 mb-3">
+                  <Terminal className="w-4 h-4 inline mr-2" />
+                  Program Input (stdin)
+                  <span className="ml-2 text-xs text-gray-500 font-normal">
+                    Values your program reads from the keyboard — one per line
+                  </span>
+                </label>
+                <textarea
+                  value={runInput}
+                  onChange={(e) => setRunInput(e.target.value)}
+                  placeholder={"E.g.,\n5\nhello world"}
+                  className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-green-500/50 focus:bg-white/10 focus:shadow-[0_0_20px_rgba(34,197,94,0.15)] transition-all duration-300 resize-none h-24 font-mono text-sm"
+                />
               </div>
 
               {/* Action Buttons */}

@@ -593,6 +593,7 @@ const ViewCodeDetail = () => {
 
   const [isRunning, setIsRunning] = useState(false);
   const [runOutput, setRunOutput] = useState("");
+  const [runInput, setRunInput] = useState("");
   const [showRun, setShowRun] = useState(false);
 
   const [copied, setCopied] = useState(false);
@@ -698,7 +699,7 @@ const ViewCodeDetail = () => {
       const res = await fetch("http://localhost:5000/api/code/run", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ language, code: cleanedCode }),
+        body: JSON.stringify({ language, code: cleanedCode, input: runInput }),
       });
       const data = await res.json();
       setRunOutput(
@@ -918,6 +919,27 @@ const ViewCodeDetail = () => {
                     {cleanCode(codeData.code)}
                   </pre>
                 </div>
+              </div>
+            </div>
+
+            {/* Program Input (stdin) */}
+            <div className="relative bg-[#0d0d12]/90 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="flex items-center gap-3 px-6 py-4 border-b border-white/10 bg-white/[0.02]">
+                <Terminal className="w-5 h-5 text-gray-400" />
+                <span className="text-sm font-semibold text-gray-300">
+                  Program Input (stdin)
+                </span>
+                <span className="text-xs text-gray-500 font-normal ml-2">
+                  Values your program reads from the keyboard — one per line
+                </span>
+              </div>
+              <div className="p-6 sm:p-8">
+                <textarea
+                  value={runInput}
+                  onChange={(e) => setRunInput(e.target.value)}
+                  placeholder={"E.g.,\n5\nhello world"}
+                  className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-emerald-500/50 h-24 font-mono text-sm resize-none"
+                />
               </div>
             </div>
 

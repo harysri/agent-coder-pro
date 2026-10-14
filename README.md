@@ -35,7 +35,7 @@
 
 ## ✦ Overview
 
-**Agent Coder Pro** is a state-of-the-art AI development environment that converts plain English prompts into clean, executable code. Powered by advanced LLMs (Hugging Face + Gemini), it supports **Python, JavaScript, C++, and C** — all wrapped in an immersive cosmic-themed UI.
+**Agent Coder Pro** is a state-of-the-art AI development environment that converts plain English prompts into clean, executable code. Powered by advanced LLMs (Gemini 3.5 Flash Lite + 2.5 Flash), it supports **Python, JavaScript, C++, and C** — all wrapped in an immersive cosmic-themed UI.
 
 ```
 💬 "Create a calculator in Python"   →   🧠 AI Processing   →   ⚡ Executable Code
@@ -92,10 +92,10 @@
 
 ### AI & APIs
 
-|     | Service                             | Usage                        |
-| --- | ----------------------------------- | ---------------------------- |
-| 🤗  | **Hugging Face** (Kimi-K2-Thinking) | Code generation              |
-| 🌟  | **Google Gemini 2.5 Flash**         | Code explanation & debugging |
+|     | Service                          | Usage                        |
+| --- | -------------------------------- | ---------------------------- |
+| 🌟  | **Google Gemini 3.5 Flash Lite** | Code generation              |
+| ✨  | **Google Gemini 3.1 Flash Lite** | Code explanation & debugging |
 
 </div>
 
