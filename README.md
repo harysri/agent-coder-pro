@@ -103,24 +103,40 @@
 
 ## ✦ Screenshots
 
-- **🏠 Home Page**
-  <img src="./screenshots/home.png" alt="Home Page" width="360" />
-- **⚡ Code Generator**
-  <img src="./screenshots/code-generator.png" alt="Code Generator" width="360" />
-- **💾 Saved Code**
-  <img src="./screenshots/saved-code-detail.png" alt="Saved Code" width="360" />
-- **🏠 Home — Hero**
-  <img src="./screenshots/home-part1.png" alt="Home Hero" width="360" />
-- **🏠 Home — Features**
-  <img src="./screenshots/home-part2.png" alt="Home Features" width="360" />
-- **🔐 Signup**
-  <img src="./screenshots/signup.png" alt="Signup" width="360" />
-- **🔐 Login**
-  <img src="./screenshots/login.png" alt="Login" width="360" />
-- **👤 Profile**
-  <img src="./screenshots/profile.png" alt="Profile" width="360" />
-- **📂 Saved Code Detail**
-  <img src="./screenshots/saved-code-detail.png" alt="Saved Code Detail" width="360" />
+<div align="center">
+  <p>
+    <strong>Home Page</strong><br />
+    <img src="./screenshots/home.png" alt="Home Page" width="640" />
+  </p>
+  <p>
+    <strong>Code Generator</strong><br />
+    <img src="./screenshots/code-generator.png" alt="Code Generator" width="640" />
+  </p>
+  <p>
+    <strong>Saved Code Detail</strong><br />
+    <img src="./screenshots/saved-code-detail.png" alt="Saved Code Detail" width="640" />
+  </p>
+  <p>
+    <strong>Home — Hero</strong><br />
+    <img src="./screenshots/home-part1.png" alt="Home Hero" width="640" />
+  </p>
+  <p>
+    <strong>Home — Features</strong><br />
+    <img src="./screenshots/home-part2.png" alt="Home Features" width="640" />
+  </p>
+  <p>
+    <strong>Signup</strong><br />
+    <img src="./screenshots/signup.png" alt="Signup" width="640" />
+  </p>
+  <p>
+    <strong>Login</strong><br />
+    <img src="./screenshots/login.png" alt="Login" width="640" />
+  </p>
+  <p>
+    <strong>Profile</strong><br />
+    <img src="./screenshots/profile.png" alt="Profile" width="640" />
+  </p>
+</div>
 
 ---
 
